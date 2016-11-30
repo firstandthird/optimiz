@@ -1,0 +1,40 @@
+{
+  "name": "optimiz",
+  "version": "1.1.0",
+  "description": "Crop, optimize, and compress images s3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/optimiz.git"
+  },
+  "keywords": [
+    "crop",
+    "optimize",
+    "images"
+  ],
+  "author": "First+Third",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/optimiz/issues"
+  },
+  "homepage": "https://github.com/firstandthird/optimiz#readme",
+  "dependencies": {
+    "gm": "^1.23.0",
+    "imagemin": "^5.2.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "svgo": "^0.7.1",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.4.0",
+    "eslint-config-firstandthird": "^3.0.2",
+    "eslint-plugin-import": "^1.14.0",
+    "mocha": "^3.0.2",
+    "wreck": "^10.0.0"
+  }
+}
