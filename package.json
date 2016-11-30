@@ -23,11 +23,12 @@
   },
   "homepage": "https://github.com/firstandthird/optimiz#readme",
   "dependencies": {
+    "async": "^2.1.4",
     "gm": "^1.23.0",
     "imagemin": "^5.2.2",
     "imagemin-mozjpeg": "^6.0.0",
-    "svgo": "^0.7.1",
-    "imagemin-pngquant": "^5.0.0"
+    "imagemin-pngquant": "^5.0.0",
+    "svgo": "^0.7.1"
   },
   "devDependencies": {
     "eslint": "^3.4.0",
