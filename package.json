@@ -1,7 +1,7 @@
 {
   "name": "optimiz",
-  "version": "1.1.0",
-  "description": "Crop, optimize, and compress images s3.",
+  "version": "0.1.0",
+  "description": "Crop, optimize, and compress images",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -14,7 +14,8 @@
   "keywords": [
     "crop",
     "optimize",
-    "images"
+    "images",
+    "svg"
   ],
   "author": "First+Third",
   "license": "MIT",
