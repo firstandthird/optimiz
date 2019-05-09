@@ -29,7 +29,6 @@ const makeTempFile = (originalFilePath) => {
 tap.test('should be able to resize an image', async t => {
   const fileBuffer = await makeTempFile(testImage);
   const options = {
-    resizeMethodName: 'resize',
     width: 50,
     height: 50,
     background: 'green'
