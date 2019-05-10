@@ -1,6 +1,6 @@
 {
   "name": "optimiz",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Crop, optimize, and compress images",
   "main": "index.js",
   "scripts": {
