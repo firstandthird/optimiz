@@ -67,8 +67,32 @@ tap.test('it should be able to thumbnail an image', async t => {
     width: 10,
     height: 10
   };
-  const outputFile = await optimiz.thumbnail(options, fs.readFileSync(fileBuffer));
+  const outputFile = await optimiz.resize(options, fs.readFileSync(fileBuffer));
   // fs.writeFileSync('theoutput3.jpg', outputFile);
   t.ok(outputFile.length < testImageSize);
+  t.end();
+});
+
+tap.test('it should be able to "cover" an image (verify the output image manually)', async t => {
+  const fileBuffer = await makeTempFile(testImage);
+  const options = {
+    width: 50,
+    type: 'cover'
+  };
+  const outputFile = await optimiz.resize(options, fs.readFileSync(fileBuffer));
+  // look at this file and confirm if it appears correct:
+  fs.writeFileSync('theoutput3_cover.jpg', outputFile);
+  t.end();
+});
+
+tap.test('it should be able to "contain" an image (verify the output image manually)', async t => {
+  const fileBuffer = await makeTempFile(testImage);
+  const options = {
+    height: 10,
+    type: 'contain'
+  };
+  const outputFile = await optimiz.resize(options, fs.readFileSync(fileBuffer));
+  // look at this file and confirm if it appears correct:
+  fs.writeFileSync('theoutput3_contain.jpg', outputFile);
   t.end();
 });
