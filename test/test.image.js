@@ -30,7 +30,6 @@ tap.test('should be able to resize an image', async t => {
   const fileBuffer = await makeTempFile(testImage);
   const options = {
     width: 50,
-    height: 50,
     background: 'green'
   };
   const outputFile = await optimiz.resize(options, fs.readFileSync(fileBuffer));
@@ -64,7 +63,6 @@ tap.test('it should be able to compress an svg image', async t => {
 tap.test('it should be able to thumbnail an image', async t => {
   const fileBuffer = await makeTempFile(testImage);
   const options = {
-    width: 10,
     height: 10
   };
   const outputFile = await optimiz.resize(options, fs.readFileSync(fileBuffer));
