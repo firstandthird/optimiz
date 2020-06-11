@@ -6,13 +6,18 @@ const testImageBase = 'snoopy.jpg';
 const testImage = path.join(__dirname, testImageBase);
 const testSVGBase = 'snoopy-pilot.svg';
 const testSVG = path.join(__dirname, testSVGBase);
+const testWEBPBase = 'sample.webp';
+const testWEBP = path.join(__dirname, testWEBPBase);
+
 const os = require('os');
 
 let testImageSize = 0;
 let testSVGSize = 0;
+let testWEBPSize = 0;
 
 testImageSize = fs.statSync(testImage).size;
 testSVGSize = fs.statSync(testSVG).size;
+testWEBPSize = fs.statSync(testWEBP).size;
 
 // copy an image to temp
 const makeTempFile = (originalFilePath) => {
@@ -57,6 +62,17 @@ tap.test('it should be able to compress an svg image', async t => {
   const outputFile = await optimiz.optimize(options, fs.readFileSync(fileBuffer));
   // fs.writeFileSync('theoutput2.svg', outputFile);
   t.ok(outputFile.length < testSVGSize);
+  t.end();
+});
+
+tap.test('it should be able to compress a webp image', async t => {
+  const fileBuffer = await makeTempFile(testWEBP);
+  const options = {
+    quality: 50
+  };
+  const outputFile = await optimiz.optimize(options, fs.readFileSync(fileBuffer));
+  fs.writeFileSync('webpoutput.webp', outputFile);
+  t.ok(outputFile.length < testWEBPSize);
   t.end();
 });
 
