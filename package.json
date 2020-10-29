@@ -15,7 +15,7 @@
     "crop",
     "optimize",
     "images",
-    "svg"
+    "webp"
   ],
   "author": "First+Third",
   "license": "MIT",
@@ -24,13 +24,7 @@
   },
   "homepage": "https://github.com/firstandthird/optimiz#readme",
   "dependencies": {
-    "imagemin": "^7.0.1",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-pngquant": "^8.0.0",
-    "imagemin-svgo": "^7.1.0",
-    "imagemin-webp": "^6.0.0",
-    "jimp": "^0.10.3",
-    "tinycolor2": "^1.4.1"
+    "sharp": "^0.26.2"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
