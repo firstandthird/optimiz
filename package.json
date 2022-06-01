@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/firstandthird/optimiz#readme",
   "dependencies": {
-    "sharp": "^0.26.2"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
