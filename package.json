@@ -1,6 +1,6 @@
 {
   "name": "optimiz",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Crop, optimize, and compress images",
   "main": "index.js",
   "scripts": {
@@ -24,12 +24,14 @@
   },
   "homepage": "https://github.com/firstandthird/optimiz#readme",
   "dependencies": {
-    "sharp": "^0.26.2"
+    "sharp": "^0.31.2"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-firstandthird": "^4.3.0",
-    "eslint-plugin-import": "^2.17.2",
-    "tap": "^13.1.6"
+    "eslint": "^8.28.0",
+    "tap": "^16.3.2"
+  },
+  "volta": {
+    "node": "18.12.1",
+    "npm": "9.1.3"
   }
 }
